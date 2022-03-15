@@ -9,24 +9,8 @@ let showData = [];
 function renderData(dataName) {
   let str = '';
 
-  switch (dataName) {
-    case data:
-      data.forEach((b) => {
-        // TODO: 改成 ES6 的 Template Literals (字面字串符)
-        const content = `<tr><td>${b.作物名稱}
-       </td><td>${b.市場名稱}
-       </td><td>${b.上價}
-       </td><td>${b.中價}
-       </td><td>${b.下價}
-       </td><td>${b.平均價}
-       </td><td>${b.交易量}
-       </td></tr>`;
-        str += content;
-      });
-      break;
-    case showData:
-      showData.forEach((b) => {
-        const content = `<tr><td>${b.作物名稱}
+  dataName.forEach((b) => {
+    const content = `<tr><td>${b.作物名稱}
          </td><td>${b.市場名稱}
          </td><td>${b.上價}
          </td><td>${b.中價}
@@ -34,11 +18,8 @@ function renderData(dataName) {
          </td><td>${b.平均價}
          </td><td>${b.交易量}
          </td></tr>`;
-        str += content;
-      });
-      break;
-    default:
-  }
+    str += content;
+  });
 
   table.innerHTML = str;
 }
