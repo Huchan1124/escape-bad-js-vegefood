@@ -12,7 +12,7 @@ module.exports = {
   },
   rules: {
   },
-  globals: {
-    axios: true,
-  },
+  // globals: {
+  //   axios: true,
+  // },
 };
